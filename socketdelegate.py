@@ -2,14 +2,14 @@ import socket
 
 class SocketConnection:
 
-	self.connection = None
+	connection = None
 
 	def __init__(self, address, port):
 		self.connection = socket.socket()
-		self.socket.connect((address, port));
+		self.connection.connect((address, port));
 
-	def readData(self):
-		self.connection.recv(1024)
+	def read(self):
+		return self.connection.recv(1024)
 
 	def send(self, data):
 		self.connection.send(data)
